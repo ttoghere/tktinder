@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1061702156451",
+    "project_id": "tktinder",
+    "storage_bucket": "tktinder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061702156451:android:bb281cfa58d91ceba37f16",
+        "android_client_info": {
+          "package_name": "site.tunckankilic.tktinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061702156451-iaefvhbap32dcgbc128d3306jn4s2c7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA3w5hwCC7zmEqUKy03CxIEax7BOY-rOM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1061702156451-iaefvhbap32dcgbc128d3306jn4s2c7a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
