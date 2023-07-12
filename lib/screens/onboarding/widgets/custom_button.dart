@@ -1,4 +1,10 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:developer';
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tktinder/cubits/signup/signup_cubit.dart';
 
 class CustomButton extends StatelessWidget {
   final TabController tabController;
@@ -23,8 +29,11 @@ class CustomButton extends StatelessWidget {
         ),
       ),
       child: ElevatedButton(
-        onPressed: () {
+        onPressed: () async {
           tabController.animateTo(tabController.index + 1);
+          if (tabController.index == 2) {
+            context.read<SignupCubit>().signupWithCredentials();
+          }
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.transparent,

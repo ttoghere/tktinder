@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'package:tktinder/models/user_match_model.dart';
 
-import '../../widgets/widgets.dart';
 
 class ChatScreen extends StatelessWidget {
   static const String routeName = '/chat';

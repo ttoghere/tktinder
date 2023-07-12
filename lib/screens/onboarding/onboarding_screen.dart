@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tktinder/cubits/signup/signup_cubit.dart';
+import 'package:tktinder/repositories/auth/auth_repository.dart';
 import 'package:tktinder/widgets/widgets.dart';
 
 import 'onboarding_screens/screens.dart';
@@ -11,7 +14,12 @@ class OnboardingScreen extends StatelessWidget {
   static Route route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: routeName),
-      builder: (context) => const OnboardingScreen(),
+      builder: (context) => BlocProvider(
+        create: (context) => SignupCubit(
+          authRepository: context.read<AuthRepository>(),
+        ),
+        child: const OnboardingScreen(),
+      ),
     );
   }
 
@@ -47,8 +55,8 @@ class OnboardingScreen extends StatelessWidget {
               Start(tabController: tabController),
               Email(tabController: tabController),
               EmailVerification(tabController: tabController),
-              Demo(tabController: tabController),
               Pictures(tabController: tabController),
+              Demo(tabController: tabController),
               Bio(tabController: tabController),
               Location(tabController: tabController),
             ],

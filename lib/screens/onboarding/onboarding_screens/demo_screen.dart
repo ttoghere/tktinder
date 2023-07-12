@@ -11,23 +11,24 @@ class Demo extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {    final TextEditingController controller = TextEditingController();
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 50),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.max,
         children: [
-         const Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CustomTextHeader(text: 'What\'s Your Gender?'),
-              SizedBox(height: 20),
-              CustomCheckbox(text: 'MALE'),
-              CustomCheckbox(text: 'FEMALE'),
-              SizedBox(height: 100),
-              CustomTextHeader(text: 'What\'s Your Age?'),
-              CustomTextField(hint: 'ENTER YOUR AGE'),
+              const CustomTextHeader(text: 'What\'s Your Gender?'),
+              const SizedBox(height: 20),
+              const CustomCheckbox(text: 'MALE'),
+              const CustomCheckbox(text: 'FEMALE'),
+              const SizedBox(height: 100),
+              const CustomTextHeader(text: 'What\'s Your Age?'),
+              CustomTextField(hint: 'ENTER YOUR AGE',controller: controller,),
             ],
           ),
           Column(

@@ -10,10 +10,12 @@ import 'package:tktinder/widgets/widgets.dart';
 class HomeScreen extends StatelessWidget {
   static const String routeName = '/homescreen';
 
+  const HomeScreen({super.key});
+
   static Route route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: routeName),
-      builder: (context) => HomeScreen(),
+      builder: (context) =>const HomeScreen(),
     );
   }
 

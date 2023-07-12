@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tktinder/screens/profile/profile_screen.dart';
 import 'package:tktinder/screens/screens.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -54,7 +55,7 @@ class CustomAppBar extends StatelessWidget {
                   icon:
                       Icon(Icons.person, color: Theme.of(context).primaryColor),
                   onPressed: () {
-                    Navigator.pushNamed(context, UsersScreen.routeName);
+                    Navigator.pushNamed(context, ProfileScreen.routeName);
                   })
             ]
           : null,

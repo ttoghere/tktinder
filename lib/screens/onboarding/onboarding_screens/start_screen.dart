@@ -19,12 +19,12 @@ class Start extends StatelessWidget {
         children: [
           Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 200,
                 width: 200,
-                child: SvgPicture.asset(
-                  'assets/couple.svg',
-                ),
+                // child: SvgPicture.asset(
+                //   'lib/assets/pulse.svg',
+                // ),
               ),
               const SizedBox(height: 50),
               Text('Welcome to Arrow',

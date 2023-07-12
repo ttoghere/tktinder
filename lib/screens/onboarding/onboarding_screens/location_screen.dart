@@ -12,17 +12,22 @@ class Location extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController controller = TextEditingController();
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 50),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.max,
         children: [
-       const   Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CustomTextHeader(text: 'Where Are You?'),
-              CustomTextField(hint: 'ENTER YOUR LOCATION'),
+              const CustomTextHeader(text: 'Where Are You?'),
+              CustomTextField(
+                hint: 'ENTER YOUR LOCATION',
+                controller: controller,
+              ),
             ],
           ),
           Column(
@@ -33,7 +38,7 @@ class Location extends StatelessWidget {
                 selectedColor: Theme.of(context).primaryColor,
                 unselectedColor: Theme.of(context).colorScheme.background,
               ),
-            const  SizedBox(height: 10),
+              const SizedBox(height: 10),
               CustomButton(tabController: tabController, text: 'DONE'),
             ],
           ),

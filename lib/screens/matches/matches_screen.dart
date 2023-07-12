@@ -30,7 +30,7 @@ class MatchesScreen extends StatelessWidget {
             child: CustomAppBar(title: 'MATCHES')),
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

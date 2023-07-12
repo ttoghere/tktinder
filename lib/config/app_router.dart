@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:tktinder/models/models.dart';
+import 'package:tktinder/screens/profile/profile_screen.dart';
 import 'package:tktinder/screens/screens.dart';
 
 class AppRouter {
@@ -20,6 +21,8 @@ class AppRouter {
         return MatchesScreen.route();
       case ChatScreen.routeName:
         return ChatScreen.route(userMatch: settings.arguments as UserMatch);
+      case ProfileScreen.routeName:
+        return ProfileScreen.route();
       default:
         return _errorRoute();
     }
